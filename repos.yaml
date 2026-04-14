@@ -1,0 +1,54 @@
+# To auto-generate this list from GitHub:
+#   gh repo list your-org --json name --limit 100 -q '.[].name'
+
+repos:
+  # ── Bots (Lex + Lambda) ──
+  - name: bot-claims-lambda
+    org: your-org
+    type: bot
+    default_branch: main
+
+  - name: bot-policy-lambda
+    org: your-org
+    type: bot
+    default_branch: main
+
+  - name: bot-payments-lambda
+    org: your-org
+    type: bot
+    default_branch: main
+
+  # ── Services ──
+  - name: claims-service
+    org: your-org
+    type: service
+    default_branch: main
+
+  - name: auth-service
+    org: your-org
+    type: service
+    default_branch: main
+
+  # ── Libraries ──
+  - name: shared-utils
+    org: your-org
+    type: library
+    default_branch: main
+
+  - name: cdk-constructs
+    org: your-org
+    type: library
+    default_branch: main
+
+  # ── Infrastructure ──
+  - name: permission-boundaries
+    org: your-org
+    type: infrastructure
+    default_branch: main
+
+  - name: pipeline-constructs
+    org: your-org
+    type: infrastructure
+    default_branch: main
+
+  # Add the rest of your 47 repos here...

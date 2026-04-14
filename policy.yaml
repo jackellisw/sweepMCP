@@ -1,0 +1,24 @@
+# Fleet policy — the rules your repos are checked against.
+# Edit this file to change what "compliant" means.
+
+node:
+  target_version: "20"
+
+vulnerabilities:
+  # Alerts at this severity and above will be flagged
+  max_allowed_severity: "moderate"
+
+dependencies:
+  # Packages that should not be in any repo
+  banned:
+    - package: "aws-sdk"
+      reason: "Migrate to @aws-sdk v3 modular clients"
+    - package: "request"
+      reason: "Deprecated — use native fetch or undici"
+    - package: "moment"
+      reason: "Use date-fns or dayjs instead"
+
+  # Minimum versions required across the fleet
+  required_minimums:
+    aws-cdk-lib: "2.140.0"
+    typescript: "5.4.0"
