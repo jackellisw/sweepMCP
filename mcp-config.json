@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "repokeeper": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["tsx", "src/server.ts"],
+      "cwd": "/path/to/repokeeper"
+    }
+  }
+}
